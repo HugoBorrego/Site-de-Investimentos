@@ -1,0 +1,164 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: #ffffff;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+main {
+    padding: 20px;
+    padding-bottom: 60px;
+    background: #eeecec;
+}
+
+section {
+    margin: 20px 0;
+    padding: 20px;  
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+}
+
+.calculator {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.calculator .left-side, 
+.calculator .right-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.calculator div {
+    margin: 10px 0;
+}
+
+.calculator label {
+    display: block; 
+    margin-bottom: 5px;
+}
+
+.calculator input[type="text"] {
+    width: 200px; 
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.calculator-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+button.calcular, 
+button.limpar {
+    padding: 10px;
+    width: 100px;
+    border: 1;
+    cursor: pointer;
+}
+
+button.calcular {
+    background: #4CAF50;
+    color: #fff;
+}
+
+button.limpar {
+    background: #f44336;
+    color: #fff;
+}
+
+.resultados {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 60px; /* Adiciona espaço entre as bordas do contêiner e seu conteúdo */ 
+    gap: 10px; /* Define a distância entre os itens dentro do contêiner */
+    font-weight: bold;
+}
+
+.output {
+    margin-bottom: 10px;
+}
+
+.noticias h3, p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.noticias p {
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+table { 
+    width: 600px; 
+    border-collapse: collapse; 
+    margin-bottom: 10px;
+    margin: 0 auto 10px auto; 
+} 
+
+table, th, td { 
+    border: 1px solid #ddd; 
+} 
+
+th, td { 
+    padding: 10px; 
+    text-align: center; 
+} 
+
+th { 
+    background-color: #333; 
+    color: white; 
+}

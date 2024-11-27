@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RiquezaOnline</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>RiquezaOnline</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#calculadora">Calculadora</a></li>
+                <li><a href="#noticias">Notícias</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bem-vindo ao RiquezaOnline</h2>
+            <p>Seu guia definitivo para investimentos eficazes. Descubra como investir de maneira inteligente para
+                garantir seu futuro financeiro.</p>
+            <h3>Como calcular os Juros Compostos</h3>
+            <p>
+            <ul>
+                <li>Primeiro lembre-se de preencher todos os campos da calculadora</li>
+                <li>Verifique qual o valor da taxa de juros, ela deve ser colocada no valor anual</li>
+                <li>Verifique qual o período, ele deve ser colocado em meses</li>
+                <li>Verifique qual o valor da alíquota, dependendo do periodo o valor pode variar</li>
+                <li>Para calcular basta apertar o botão verde escrito "Calcular"</li>
+            </ul>
+            </p>
+            <p></p>
+        </section>
+
+        <section id="calculadora">
+            <h2>Calculadora Financeira</h2>
+            <div class="calculator">
+                <div class="left-side">
+                    <div>
+                        <label for="valorinicial">Valor Inicial</label>
+                        <input type="text" id="valorinicial" placeholder="R$" oninput="formatoDinheiro(this)">
+                    </div>
+                    <div>
+                        <label for="valormensal">Valor Mensal</label>
+                        <input type="text" id="valormensal" placeholder="R$" oninput="formatoDinheiro(this)">
+                    </div>
+                    <div id="botoes">
+                        <div class="botoes">
+                            <button class="calcular" onclick="calcular()">Calcular</button>
+                            <button class="limpar" onclick="limpar()">Limpar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div>
+                        <label for="taxa">Valor da Taxa de Juros (Anual)</label>
+                        <input type="text" id="taxa" placeholder="%" oninput="formatoPorcentagem(this)">
+                    </div>
+                    <div>
+                        <label for="periodo">Período (Meses)</label>
+                        <input type="text" id="periodo" placeholder="Meses" oninput="formatoMeses(this)">
+                    </div>
+                    <div>
+                        <label for="aliquota">Alíquota</label>
+                        <input type="text" title="22,5% - 20% - 17,5% - 15%" id="aliquota" placeholder="%"
+                            oninput="formatoPorcentagem(this)">
+                    </div>
+                </div>
+            </div>
+            <div class="resultados">
+                <div class="output">
+                    <label>Total Líquido: </label>
+                    <span id="valorliquido">R$ 0,00</span>
+                </div>
+                <div class="output">
+                    <label>Rendimento: </label>
+                    <span id="rendimento">R$ 0,00</span>
+                </div>
+                <div class="output">
+                    <label>Imposto de Renda: </label>
+                    <span id="imposto">R$ 0,00</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="noticias">
+            <div class="noticias">
+                <h2>Notícias</h2>
+                <h3>O que são juros compostos?</h3>
+                <p>Os juros compostos são uma forma de calcular os juros sobre um capital inicial (o principal) não
+                    apenas
+                    ao longo de um período específico, mas também sobre os juros acumulados de períodos anteriores. Em
+                    outras palavras, é uma maneira de fazer seu dinheiro crescer mais rapidamente porque os juros ganhos
+                    em
+                    um período são adicionados ao principal para calcular os juros do próximo período. Vamos usar um
+                    exemplo
+                    para ilustrar:
+                <ul>
+                    <li>Imagine que você investiu R$1.000,00 com uma taxa de juros anual de 10%.</li>
+                    <li>No primeiro ano, você ganha R$100,00 de juros (10% de R$1.000,00), totalizando R$1.100,00.</li>
+                    <li>No segundo ano, você não ganha juros apenas sobre o capital inicial de R$1.000,00, mas sobre o
+                        novo
+                        total de R$1.100,00. Portanto, você ganha R$110,00 de juros, totalizando R$1.210,00.</li>
+                    <li>Esse processo continua nos anos seguintes, com os juros sendo calculados sobre um valor cada vez
+                        maior.</li>
+                </ul>
+                </p>
+                <h3>O que é Alíquota?</h3>
+                <p>
+                    A alíquota é a porcentagem ou valor fixo que se aplica sobre uma base de cálculo para determinar o
+                    valor
+                    de um imposto, taxa ou contribuição a ser pago. Em outras palavras, é a "taxa" que define quanto
+                    será
+                    cobrado em relação ao montante base.
+                <ul>
+                    <li>Até 6 meses: 22,5%</li>
+                    <li>Entre 6 meses a 1 ano: 20%</li>
+                    <li>Entre 1 ano a 2 anos: 17,5%</li>
+                    <li>Acima de 2 anos: 15%</li>
+                </ul>
+                </p>
+                <h3>Tabela de Juros Compostos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ano</th>
+                            <th>Valor Inicial (R$)</th>
+                            <th>Taxa de Juros (12%)</th>
+                            <th>Montante (R$)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>R$ 1.000,00</td>
+                            <td>R$ 120,00</td>
+                            <td>R$ 1.120,00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>R$ 1.120,00</td>
+                            <td>R$ 134,40</td>
+                            <td>R$ 1.254,40</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>R$ 1.254,40</td>
+                            <td>R$ 150,53</td>
+                            <td>R$ 1.404,93</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>R$ 1.404,93</td>
+                            <td>R$ 168,59</td>
+                            <td>R$ 1.573,52</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>R$ 1.573,52</td>
+                            <td>R$ 188,82</td>
+                            <td>R$ 1.762,34</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>R$ 1.762,34</td>
+                            <td>R$ 211,48</td>
+                            <td>R$ 1.973,82</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>R$ 1.973,82</td>
+                            <td>R$ 236,86</td>
+                            <td>R$ 2.210,68</td>
+                        </tr>
+                        <tr>
+                            <td>8</td>
+                            <td>R$ 2.210,68</td>
+                            <td>R$ 265,28</td>
+                            <td>R$ 2.475,96</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 RiquezaOnline. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
