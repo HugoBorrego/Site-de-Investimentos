@@ -10,7 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #333;
+    background: #252525;
     color: #ffffff;
     padding: 20px;
 }
@@ -42,14 +42,18 @@ main {
     background: #eeecec;
 }
 
+.list-instruction {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
 section {
     margin: 20px 0;
     padding: 20px;  
     border-radius: 8px; 
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px #565a58;
 }
 
-h2 {
+h2, h1, h3 {
     text-align: center;
 }
 
@@ -58,6 +62,8 @@ h2 {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .calculator .left-side, 
@@ -75,12 +81,15 @@ h2 {
 .calculator label {
     display: block; 
     margin-bottom: 5px;
+    font-weight: bold;
 }
 
 .calculator input[type="text"] {
-    width: 200px; 
+    width: 250px; 
     padding: 10px;
     margin-bottom: 10px;
+    border-radius: 10px;
+    background-color: #f1f1f1;
 }
 
 .calculator-buttons {
@@ -95,6 +104,8 @@ button.limpar {
     width: 100px;
     border: 1;
     cursor: pointer;
+    border-radius: 10px;
+    gap: 20px;
 }
 
 button.calcular {
@@ -115,6 +126,8 @@ button.limpar {
     padding: 60px; /* Adiciona espaço entre as bordas do contêiner e seu conteúdo */ 
     gap: 10px; /* Define a distância entre os itens dentro do contêiner */
     font-weight: bold;
+    width: 50%;
+    margin: 0 auto;
 }
 
 .output {
@@ -143,7 +156,7 @@ footer {
 }
 
 table { 
-    width: 600px; 
+    width: 700px; 
     border-collapse: collapse; 
     margin-bottom: 10px;
     margin: 0 auto 10px auto; 
@@ -159,6 +172,28 @@ th, td {
 } 
 
 th { 
-    background-color: #333; 
+    background-color: #252525; 
     color: white; 
+}
+
+.explanation p {
+    text-align: justify;
+    margin-bottom: 5px; 
+    text-align: center;
+}
+
+.box-info {
+    width: 100%;
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-around;
+    color: #ffffff;
+}
+.box-info-single {
+    display: center;
+    justify-content: space-between;
+    width: 200px;
+    border-radius: 30px;
+    padding: 3px;
+    background-color: #252525;
 }

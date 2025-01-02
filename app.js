@@ -40,15 +40,22 @@ function calcular() {
     let total = valorInicial;
     let totalInvestido = valorInicial;
     let jurosMensal = taxaJuros / 12;
-
+    
     for (let i = 0; i < periodo; i++) {
-        total = (total + valorMensal) * (1 + jurosMensal);
-        totalInvestido += valorMensal;
+        if (i == 0) {
+            // No primeiro mês, apenas aplicamos os juros ao valor inicial
+            total *= (1 + jurosMensal);
+        } else {
+            // A partir do segundo mês, somamos o valor mensal e aplicamos os juros
+            total = (total + valorMensal) * (1 + jurosMensal);
+            totalInvestido += valorMensal;
+        }
     }
-
+    
     const rendimentoBruto = total - totalInvestido;
     const imposto = rendimentoBruto * aliquotaImposto;
     const totalLiquido = total - imposto;
+    
 
     document.getElementById('valorliquido').textContent = totalLiquido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
     document.getElementById('rendimento').textContent = rendimentoBruto.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });

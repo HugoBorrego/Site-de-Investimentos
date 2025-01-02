@@ -22,20 +22,17 @@
 
     <main>
         <section id="home">
-            <h2>Bem-vindo ao RiquezaOnline</h2>
+            <h1>Bem-vindo ao RiquezaOnline</h1>
             <p>Seu guia definitivo para investimentos eficazes. Descubra como investir de maneira inteligente para
                 garantir seu futuro financeiro.</p>
             <h3>Como calcular os Juros Compostos</h3>
-            <p>
-            <ul>
-                <li>Primeiro lembre-se de preencher todos os campos da calculadora</li>
-                <li>Verifique qual o valor da taxa de juros, ela deve ser colocada no valor anual</li>
-                <li>Verifique qual o período, ele deve ser colocado em meses</li>
-                <li>Verifique qual o valor da alíquota, dependendo do periodo o valor pode variar</li>
-                <li>Para calcular basta apertar o botão verde escrito "Calcular"</li>
-            </ul>
-            </p>
-            <p></p>
+            <div class="list-instruction">
+                <p>Primeiro lembre-se de preencher todos os campos da calculadora</p>
+                <p>Verifique qual o valor da taxa de juros, ela deve ser colocada no valor anual</p>
+                <p>Verifique qual o período, ele deve ser colocado em meses</p>
+                <p>Verifique qual o valor da alíquota, dependendo do periodo o valor pode variar</p>
+                <p>Para calcular basta apertar o botão verde escrito "Calcular"</p>
+            </div>
         </section>
 
         <section id="calculadora">
@@ -91,7 +88,7 @@
 
         <section id="noticias">
             <div class="noticias">
-                <h2>Notícias</h2>
+                <h1>Notícias</h1>
                 <h3>O que são juros compostos?</h3>
                 <p>Os juros compostos são uma forma de calcular os juros sobre um capital inicial (o principal) não
                     apenas
@@ -125,7 +122,7 @@
                     <li>Acima de 2 anos: 15%</li>
                 </ul>
                 </p>
-                <h3>Tabela de Juros Compostos</h3>
+                <h2>Tabela de Juros Compostos</h2>
                 <table>
                     <thead>
                         <tr>
@@ -133,6 +130,8 @@
                             <th>Valor Inicial (R$)</th>
                             <th>Taxa de Juros (12%)</th>
                             <th>Montante (R$)</th>
+                            <th>Imposto de Renda (20%)</th>
+                            <th>Valor Líquido (R$)</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -141,53 +140,132 @@
                             <td>R$ 1.000,00</td>
                             <td>R$ 120,00</td>
                             <td>R$ 1.120,00</td>
+                            <td>R$ 24,00</td>
+                            <td>R$ 1.096,00</td>
                         </tr>
                         <tr>
                             <td>2</td>
-                            <td>R$ 1.120,00</td>
-                            <td>R$ 134,40</td>
-                            <td>R$ 1.254,40</td>
+                            <td>R$ 1.096,00</td>
+                            <td>R$ 131,52</td>
+                            <td>R$ 1.227,52</td>
+                            <td>R$ 26,30</td>
+                            <td>R$ 1.201,22</td>
                         </tr>
                         <tr>
                             <td>3</td>
-                            <td>R$ 1.254,40</td>
-                            <td>R$ 150,53</td>
-                            <td>R$ 1.404,93</td>
+                            <td>R$ 1.201,22</td>
+                            <td>R$ 144,15</td>
+                            <td>R$ 1.345,37</td>
+                            <td>R$ 28,83</td>
+                            <td>R$ 1.316,54</td>
                         </tr>
                         <tr>
                             <td>4</td>
-                            <td>R$ 1.404,93</td>
-                            <td>R$ 168,59</td>
-                            <td>R$ 1.573,52</td>
+                            <td>R$ 1.316,54</td>
+                            <td>R$ 157,98</td>
+                            <td>R$ 1.474,52</td>
+                            <td>R$ 31,60</td>
+                            <td>R$ 1.442,92</td>
                         </tr>
                         <tr>
                             <td>5</td>
-                            <td>R$ 1.573,52</td>
-                            <td>R$ 188,82</td>
-                            <td>R$ 1.762,34</td>
+                            <td>R$ 1.442,92</td>
+                            <td>R$ 173,15</td>
+                            <td>R$ 1.616,07</td>
+                            <td>R$ 34,63</td>
+                            <td>R$ 1.581,44</td>
                         </tr>
                         <tr>
                             <td>6</td>
-                            <td>R$ 1.762,34</td>
-                            <td>R$ 211,48</td>
-                            <td>R$ 1.973,82</td>
+                            <td>R$ 1.581,44</td>
+                            <td>R$ 189,77</td>
+                            <td>R$ 1.771,21</td>
+                            <td>R$ 37,95</td>
+                            <td>R$ 1.733,26</td>
                         </tr>
                         <tr>
                             <td>7</td>
-                            <td>R$ 1.973,82</td>
-                            <td>R$ 236,86</td>
-                            <td>R$ 2.210,68</td>
+                            <td>R$ 1.733,26</td>
+                            <td>R$ 207,99</td>
+                            <td>R$ 1.941,25</td>
+                            <td>R$ 41,60</td>
+                            <td>R$ 1.899,65</td>
                         </tr>
                         <tr>
                             <td>8</td>
-                            <td>R$ 2.210,68</td>
-                            <td>R$ 265,28</td>
-                            <td>R$ 2.475,96</td>
+                            <td>R$ 1.899,65</td>
+                            <td>R$ 227,96</td>
+                            <td>R$ 2.127,61</td>
+                            <td>R$ 45,59</td>
+                            <td>R$ 2.082,02</td>
                         </tr>
+                        <tr>
+                            <td>9</td>
+                            <td>R$ 2.082,02</td>
+                            <td>R$ 249,84</td>
+                            <td>R$ 2.331,86</td>
+                            <td>R$ 49,97</td>
+                            <td>R$ 2.281,89</td>
+                        </tr>
+                        <tr>
+                            <td>10</td>
+                            <td>R$ 2.281,89</td>
+                            <td>R$ 273,83</td>
+                            <td>R$ 2.555,72</td>
+                            <td>R$ 54,77</td>
+                            <td>R$ 2.500,95</td>
+                        </tr>                       
                     </tbody>
                 </table>
+                <div class="explanation">
+                <h3>Por que o valor da calculadora financeira da um resultado maior 
+                    que o valor da tabela de juros compostos</h3>
+                    <p>Quando você usa uma calculadora financeira para calcular juros 
+                        compostos, o cálculo é feito mês a mês. Isso significa que a 
+                        cada mês, o valor dos juros é adicionado ao principal (o valor inicial),
+                        e no mês seguinte, os juros são calculados sobre esse novo valor 
+                        aumentado. Isso faz com que os juros de cada mês rendam no final do 
+                        período, resultando em um montante total maior.</p>
+                    <p>Por outro lado, em uma tabela de juros compostos, pode ser que os juros 
+                        sejam aplicados de forma fixa, sem recalcular os juros sobre o novo 
+                        valor principal a cada mês. Isso pode acontecer se a tabela for 
+                        simplificada ou se usar um método diferente de cálculo que não leva em 
+                        conta o efeito de capitalização mensal dos juros.</p>
+                    <p>Portanto, a calculadora financeira geralmente dará um resultado maior 
+                        porque ela leva em consideração o efeito dos juros compostos aplicados 
+                        mensalmente, enquanto a tabela pode estar utilizando um cálculo mais 
+                        simples.
+                    </p>
+                </div>
             </div>
         </section>
+        <!--
+        <section id="dashboard">
+            <div class="dashboard">
+                <h2>Dashboard</h2>
+                <div class="box-info">
+                    <div class="box-info-single">
+                        <div class="info-text">
+                            <h3>Valor Investido</h3>
+                            <p>R$ 0,00</p>
+                        </div>
+                    </div>
+                    <div class="box-info-single">
+                        <div class="info-text">
+                            <h3>Valor Líquido</h3>
+                            <p>R$ 0,00</p>
+                        </div>
+                    </div>
+                    <div class="box-info-single">
+                        <div class="info-text">
+                            <h3>Dividendos</h3>
+                            <p>R$ 0,00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        -->
     </main>
     <footer>
         <p>&copy; 2024 RiquezaOnline. Todos os direitos reservados.</p>
