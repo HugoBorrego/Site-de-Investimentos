@@ -72,3 +72,135 @@ function limpar() {
     document.getElementById('rendimento').textContent = 'R$ 0,00';
     document.getElementById('imposto').textContent = 'R$ 0,00';
 }
+
+google.load("visualization", "1", {packages:["corechart"]});
+google.setOnLoadCallback(drawCharts);
+
+function drawCharts() {
+    var barData = google.visualization.arrayToDataTable([
+        ['Ano', 'Investimento', 'Financiamento'],
+        ['1', 10000, 10000],
+        ['2', 10960, 9000],
+        ['3', 12010, 8000],
+        ['4', 13160, 7000],
+        ['5', 14420, 6000],
+        ['6', 15810, 5000],
+        ['7', 17330, 4000],
+        ['8', 19000, 3000],
+        ['9', 20820, 2000],
+        ['10', 22810, 1000],
+        ['11', 25000, 0]
+    ]);
+
+    var barOptions = {
+        focusTarget: 'category',
+        backgroundColor: 'transparent',
+        colors: ['blue', 'red'],
+        fontName: 'Open Sans',
+        chartArea: {
+            left: 50,
+            top: 10,
+            width: '100%',
+            height: '70%'
+        },
+        bar: {
+            groupWidth: '80%'
+        },
+        hAxis: {
+            textStyle: {
+                fontSize: 11
+            }
+        },
+        vAxis: {
+            minValue: 0,
+            maxValue: 30000,
+            baselineColor: '#DDD',
+            gridlines: {
+                color: '#DDD',
+                count: 4
+            },
+            textStyle: {
+                fontSize: 11
+            }
+        },
+        legend: {
+            position: 'bottom',
+            textStyle: {
+                fontSize: 12
+            }
+        },
+        animation: {
+            duration: 1200,
+            easing: 'out',
+            startup: true
+        }
+    };
+
+    var barChart = new google.visualization.ColumnChart(document.getElementById('bar-chart'));
+    barChart.draw(barData, barOptions);
+
+    var lineData = google.visualization.arrayToDataTable([
+    ['Ano', 'Imóvel', 'Aluguel'],
+        ['2000', 10000, 6000],
+        ['2002', 11000, 6600],
+        ['2004', 12000, 7200],
+        ['2006', 13000, 7800],
+        ['2008', 14000, 8400],
+        ['2010', 15000, 9000],
+        ['2012', 16000, 9600],
+        ['2014', 17000, 10200],
+        ['2016', 18000, 10800],
+        ['2018', 19000, 11400],
+        ['2020', 20000, 12000],
+        ['2022', 21000, 12600],
+        ['2024', 22000, 13200]
+    ]);
+
+    var lineOptions = {
+        backgroundColor: 'transparent',
+        colors: ['blue', 'red'],
+        fontName: 'Open Sans',
+        focusTarget: 'category',
+        chartArea: {
+            left: 50,
+            top: 10,
+            width: '100%',
+            height: '70%'
+        },
+        hAxis: {
+            textStyle: {
+                fontSize: 11
+            },
+            baselineColor: 'transparent',
+            gridlines: {
+                color: 'transparent'
+            }
+        },
+        vAxis: {
+            minValue: 0,
+            maxValue: 1000,
+            baselineColor: '#DDD',
+            gridlines: {
+                color: '#DDD',
+                count: 4
+            },
+            textStyle: {
+                fontSize: 11
+            }
+        },
+        legend: {
+            position: 'bottom',
+            textStyle: {
+                fontSize: 12
+            }
+        },
+        animation: {
+            duration: 1200,
+            easing: 'out',
+            startup: true
+        }
+    };
+
+    var lineChart = new google.visualization.LineChart(document.getElementById('line-chart'));
+    lineChart.draw(lineData, lineOptions);
+}

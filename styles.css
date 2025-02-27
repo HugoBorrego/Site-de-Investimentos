@@ -10,13 +10,25 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #252525;
+    background: #111111;
     color: #ffffff;
-    padding: 20px;
+    font-family: Jazz;
+}
+
+header .title {
+    display: flex;
+    align-items: center;
 }
 
 header h1 {
-    margin: 0;
+    margin: 10px;
+}
+
+header h3 {
+    margin-left: 10px;
+    position: relative;
+    top: 10px;
+    font-family: Brush Script MT, Brush Script Std, cursive;
 }
 
 nav ul {
@@ -35,15 +47,39 @@ nav ul li a {
     text-decoration: none;
 }
 
-
 main {
     padding: 20px;
     padding-bottom: 60px;
     background: #eeecec;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#home {
+    padding: 20px; 
+}
+
+#home-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.introduction, .list-instruction {
+    width: 55%; 
+    padding: 10px; 
+    box-sizing: border-box; 
+}
+
+.introduction p1 {
+    font-family: cursive;
+    margin: 180px;
 }
 
 .list-instruction {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.list-instruction h3 {
+    font-family: 'Times New Roman', Times, serif;
 }
 
 section {
@@ -123,8 +159,8 @@ button.limpar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 60px; /* Adiciona espaço entre as bordas do contêiner e seu conteúdo */ 
-    gap: 10px; /* Define a distância entre os itens dentro do contêiner */
+    padding: 60px; 
+    gap: 10px; 
     font-weight: bold;
     width: 50%;
     margin: 0 auto;
@@ -136,7 +172,7 @@ button.limpar {
 
 .noticias h3, p {
     text-align: center;
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
 }
 
@@ -145,15 +181,39 @@ button.limpar {
     margin-top: 10px;
 }
 
-footer {
-    background: #333;
-    color: #fff;
-    text-align: center;
-    padding: 3px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+#noticias-informacoes {
+    display: flex;
+    justify-content: space-between;
 }
+
+.juros-compostos, .aliquota {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.juros-compostos ul {
+    padding-left: 50px;
+}
+
+.aliquota ul {
+    padding-left: 100px;
+}
+
+#tabela-explicacao {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tabela {
+    padding: 10px;
+}
+
+.explanation {
+    width: 700px;
+    padding-top: 80px;
+}
+
 
 table { 
     width: 700px; 
@@ -197,3 +257,34 @@ th {
     padding: 3px;
     background-color: #252525;
 }
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 3px 0;
+    width: 100%;
+    bottom: 0;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+  #bar-chart {
+    width: 800px;
+    height: 300px;
+    position: relative;
+  }
+  #line-chart {
+    width: 800px;
+    height: 300px;
+    position: relative;
+  }
+  #bar-chart::before, #line-chart::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 240px;
+    height: 30px;
+    left: 155px;
+    top: 254px;
+  }
